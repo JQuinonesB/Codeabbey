@@ -1,26 +1,26 @@
 #include <stdio.h>
 
-#define MAX_ARR_SIZE 500
-
-int read_array(int tot_arr, int count, int *ptr2arr);
+void read_array(int tot_arr, int count, int *ptr_suma);
 
 int main(){
-    int nums_array[MAX_ARR_SIZE];
-    int counter = 0, total_arr, *ptr_array;
+    int counter = 0, total_arr, suma = 0;
 
     scanf("%d", &total_arr);
-    read_array(total_arr, counter, &nums_array);
+    read_array(total_arr, counter, &suma);
+    printf("%d\n", suma);
     return 0;
 }
 
-int read_array(int tot_arr, int count, int *ptr2arr){
+void read_array(int tot_arr, int count, int *ptr_suma){
+    int temp;
     if(count == tot_arr){
-        return 0;
+
     }
     else{
-        scanf("%d", *ptr2arr);
+        scanf("%d", &temp);
+        *ptr_suma += temp;
         count++;
-        ptr2arr++;
+        read_array(tot_arr, count, ptr_suma);
     }
 
 }
