@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": true,
+      "externalConsole": false,
+      "cwd": "/Users/JairoQuinones/Documents/GitHub/Codeabbey_C/Codeabbey/Codeabbey003",
+      "program": "/Users/JairoQuinones/Documents/GitHub/Codeabbey_C/Codeabbey/Codeabbey003/build/Debug/outDebug",
+      "MIMode": "gdb"
+    }
+  ]
+}
