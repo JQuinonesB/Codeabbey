@@ -2,33 +2,35 @@
 
 #define MAX_ARRAY_SIZE 500
 
-void read_array(int tot_arr, int count, int *ptr_min);
+int min_array[MAX_ARRAY_SIZE];
+
+void read_array(int tot_arr, int count);
 
 int main(){
-    int counter = 0, total_arr, suma = 0;
-    int min_array[MAX_ARRAY_SIZE];
+    int counter = 0, total_arr, *ptr_arr;
+    int i;
 
     scanf("%d", &total_arr);
-    read_array(total_arr, counter, &min_array);
-    printf("%d\n", suma);
+    read_array(total_arr, counter);
+    for(i = 0; i < total_arr; i++){
+        printf("%d\n", min_array[i]);
+        ptr_arr++;
+    }
     return 0;
 }
 
-void read_array(int tot_arr, int count, int *ptr_min){
-    int temp1, temp2;
+void read_array(int tot_arr, int count){
+    int temp1, temp2, *ptrarr;
     if(count == tot_arr){
-
+        ptrarr = &min_array[0];
     }
     else{
         scanf("%d", &temp1);
         scanf("%d", &temp2);
         (temp1 <= temp2) ?
-            (*ptr_min = temp1):
-            (*ptr_min = temp2);
-
-        ptr_min++;
+            (min_array[count] = temp1):
+            (min_array[count] = temp2);
         count++;
-        read_array(tot_arr, count, &ptr_min);
+        read_array(tot_arr, count);
     }
-
 }
