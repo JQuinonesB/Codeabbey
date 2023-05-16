@@ -4,7 +4,7 @@
 
 void read_array(int tot_arr, int count);
 
-void main()
+int main()
 {
     int counter = 0, total_arr, suma = 0;
     int num1_array[MAX_ARRAY_SIZE], num2_array[MAX_ARRAY_SIZE];
@@ -12,7 +12,7 @@ void main()
 
     scanf("%d", &total_arr);
     read_array(total_arr, counter);
-    return;
+    return 0;
 }
 
 void read_array(int tot_arr, int count)
