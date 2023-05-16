@@ -3,14 +3,22 @@
   "configurations": [
     {
       "name": "C/C++ Runner: Debug Session",
-      "type": "lldb",
+      "type": "cppdbg",
       "request": "launch",
       "args": [],
-      "stopAtEntry": true,
+      "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/Users/JairoQuinones/Documents/GitHub/Codeabbey_C/Codeabbey/Codeabbey004",
-      "program": "/Users/JairoQuinones/Documents/GitHub/Codeabbey_C/Codeabbey/Codeabbey004/build/Debug/outDebug",
-      "MIMode": "gdb"
+      "cwd": "/Users/JairoQuinones/Documents/Codeabbey",
+      "program": "/Users/JairoQuinones/Documents/Codeabbey/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
     }
   ]
 }
