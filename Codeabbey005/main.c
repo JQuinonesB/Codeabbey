@@ -8,7 +8,6 @@ void read_array(int tot_arr, int count);
 
 int main(){
     int counter = 0, total_arr;
-    int i;
 
     scanf("%d", &total_arr);
     read_array(total_arr, counter);
